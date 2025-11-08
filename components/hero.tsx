@@ -13,8 +13,8 @@ export function Hero() {
                     src="/hero.avif"
                     alt="Community coming together for meaningful causes"
                     className="w-full h-full object-cover"
-                    width={50}
-                    height={50}
+                    width={800}
+                    height={500}
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-primary/20" />
             </div>
@@ -27,7 +27,7 @@ export function Hero() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight text-balance"
                     >
-                        Decentralized Funding for Causes That Transform Lives
+                        Decentralized Funding That Transform Lives
                     </motion.h1>
 
                     <motion.p
