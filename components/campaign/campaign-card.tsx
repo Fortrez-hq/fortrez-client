@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 import { Progress } from "@/components/ui/progress"
 import { ArrowRight, Users, Clock } from "lucide-react"
@@ -8,7 +7,6 @@ import { Campaign } from "@/types"
 import { calculatePercentage } from "@/lib/utils"
 
 export function CampaignCard({ campaign }: { campaign: Campaign }) {
-    const [isHovered, setIsHovered] = useState(false)
     const percentage = calculatePercentage(campaign.raised, campaign.target)
 
     const formatAmount = (amount: number) => {
@@ -28,8 +26,6 @@ export function CampaignCard({ campaign }: { campaign: Campaign }) {
         <Link href={`/campaign/${campaign.id}`}>
             <div
                 className="group cursor-pointer transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-1 bg-card rounded-xl overflow-hidden border border-border h-full flex flex-col"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
             >
                 <div className="relative overflow-hidden bg-muted">
                     {campaign.image ? (

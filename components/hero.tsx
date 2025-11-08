@@ -3,15 +3,18 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 export function Hero() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0">
-                <img
+                <Image
                     src="/hero.avif"
                     alt="Community coming together for meaningful causes"
                     className="w-full h-full object-cover"
+                    width={50}
+                    height={50}
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-primary/20" />
             </div>

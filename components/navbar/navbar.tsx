@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
 import { DesktopNav } from "./desktop-nav";
 import { MobileMenu } from "./mobile-menu";
-import { COLORS, NAV_ITEMS } from "@/lib/constants";
+import { NAV_ITEMS } from "@/lib/constants";
 
 
 interface NavbarProps {

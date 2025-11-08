@@ -38,7 +38,7 @@ export function FeaturedCampaigns() {
     return (
         <section className="py-16 sm:py-20 bg-background">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
+
                 <div className="flex items-end justify-between mb-12">
                     <div>
                         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
@@ -54,14 +54,12 @@ export function FeaturedCampaigns() {
                     </Button>
                 </div>
 
-                {/* Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {featured.map((campaign, index) => (
+                    {featured.map((campaign) => (
                         <div
                             key={campaign.id}
                             className="flex gap-6 group cursor-pointer"
                         >
-                            {/* Image */}
                             <div className="flex-shrink-0 w-32 h-32 rounded-lg overflow-hidden bg-muted">
                                 <img
                                     src={campaign.image}
@@ -70,7 +68,6 @@ export function FeaturedCampaigns() {
                                 />
                             </div>
 
-                            {/* Content */}
                             <div className="flex-1">
                                 <div className="text-xs font-semibold text-primary mb-2 uppercase tracking-wide">
                                     {campaign.category}
