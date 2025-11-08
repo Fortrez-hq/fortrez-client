@@ -22,30 +22,29 @@ export function ImpactStats() {
     return (
         <section className="py-16 sm:py-20 bg-muted/30">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    {/* Image */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
-                        <img
+                        <Image
                             src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80"
                             alt="Community impact"
                             className="w-full h-full object-cover"
+                            width={500}
+                            height={300}
                         />
                     </div>
 
-                    {/* Content */}
                     <div>
                         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
                             When people help people,{" "}
-                            <span className="text-primary">change happens</span>
+                            <span className="text-primary">change happens!</span>
                         </h2>
 
                         <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                            Through blockchain-verified transparency and direct funding, we've helped
+                            Through blockchain-verified transparency and direct funding, we&lsquo;ve helped
                             thousands of campaigns reach their goals and create lasting impact in
                             communities worldwide.
                         </p>
 
-                        {/* Stats */}
                         <div className="grid grid-cols-3 gap-6 mb-8">
                             {stats.map((stat) => (
                                 <div key={stat.label}>

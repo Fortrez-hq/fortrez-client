@@ -8,7 +8,7 @@ import { campaigns } from "@/config/campaign-data"
 
 export function OngoingContributions() {
     return (
-        <section className="relative z-20 -mt-32 pb-16">
+        <section className="relative z-20 -mt-32 pb-10" id="campaigns">
             <div className="mx-4 sm:mx-6 lg:mx-8 xl:mx-16 2xl:mx-24">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}

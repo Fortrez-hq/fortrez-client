@@ -5,6 +5,7 @@ import { Progress } from "@/components/ui/progress"
 import { ArrowRight, Users, Clock } from "lucide-react"
 import { Campaign } from "@/types"
 import { calculatePercentage } from "@/lib/utils"
+import Image from "next/image"
 
 export function CampaignCard({ campaign }: { campaign: Campaign }) {
     const percentage = calculatePercentage(campaign.raised, campaign.target)
@@ -29,10 +30,12 @@ export function CampaignCard({ campaign }: { campaign: Campaign }) {
             >
                 <div className="relative overflow-hidden bg-muted">
                     {campaign.image ? (
-                        <img
+                        <Image
                             src={campaign.image}
                             alt={campaign.title}
                             className="w-full h-48 object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                            height={300}
+                            width={500}
                         />
                     ) : (
                         <div className="w-full h-48 bg-muted flex items-center justify-center">

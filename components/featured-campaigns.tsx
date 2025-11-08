@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 const featured = [
     {
@@ -36,7 +37,7 @@ const featured = [
 
 export function FeaturedCampaigns() {
     return (
-        <section className="py-16 sm:py-20 bg-background">
+        <section className="py-16 sm:py-20 bg-background" id="causes">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="flex items-end justify-between mb-12">
@@ -61,10 +62,12 @@ export function FeaturedCampaigns() {
                             className="flex gap-6 group cursor-pointer"
                         >
                             <div className="flex-shrink-0 w-32 h-32 rounded-lg overflow-hidden bg-muted">
-                                <img
+                                <Image
                                     src={campaign.image}
                                     alt={campaign.title}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    width={500}
+                                    height={300}
                                 />
                             </div>
 
