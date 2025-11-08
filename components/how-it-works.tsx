@@ -1,96 +1,92 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { CheckCircle2, Users, Zap, Shield, TrendingUp } from "lucide-react"
+import { Rocket, Share2, Shield, Activity, CheckCircle } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const steps = [
     {
-        icon: CheckCircle2,
-        title: "Start a Campaign",
+        icon: Rocket,
+        number: "01",
+        title: "Create Your Campaign",
         description:
-            "Create your campaign with clear goals, detailed description, and funding target. Our team verifies every campaign for legitimacy.",
+            "Set your funding goal and share your story. Add photos and details to help donors understand your cause.",
     },
     {
-        icon: Users,
-        title: "Build Support",
+        icon: Share2,
+        number: "02",
+        title: "Share With Community",
         description:
-            "Share your cause with the community. Supporters from around the world can contribute securely using cryptocurrency or traditional payments.",
+            "Spread the word through social media and email. Engage with supporters and answer questions.",
     },
     {
         icon: Shield,
-        title: "Blockchain Verified",
+        number: "03",
+        title: "Receive Contributions",
         description:
-            "Every transaction is recorded on the blockchain. Full transparency ensures funds are tracked from donation to impact.",
+            "Accept donations through crypto or traditional payment. All transactions recorded on blockchain.",
     },
     {
-        icon: TrendingUp,
-        title: "Track Progress",
+        icon: Activity,
+        number: "04",
+        title: "Track Your Progress",
         description:
-            "Real-time updates on funding progress, campaign milestones, and distribution of funds. Accountability at every step.",
+            "Monitor donations in real-time. Share updates and milestones with your supporters.",
     },
     {
-        icon: Zap,
-        title: "Distribute Impact",
+        icon: CheckCircle,
+        number: "05",
+        title: "Withdraw Funds",
         description:
-            "Once funded, verified organizations receive funds immediately. No delays. Direct funding for direct impact.",
+            "Access your funds instantly as you reach goals. Use them to make the impact you promised.",
     },
 ]
 
 export function HowItWorks() {
     return (
-        <section className="py-10 sm:py-12 bg-gradient-to-b from-white to-gray-50">
+        <section className="py-16 sm:py-20 bg-background">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-16 sm:mb-20"
-                >
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-balance">How It Works</h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty">
-                        A transparent, secure, and efficient platform for funding causes that matter. Five simple steps to make real
-                        impact.
+                {/* Header */}
+                <div className="mb-12">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">
+                        How It Works
+                    </h2>
+                    <p className="text-muted-foreground text-lg max-w-2xl">
+                        Simple steps to launch your campaign and start making an impact
                     </p>
-                </motion.div>
+                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
-                    {steps.map((step, index) => {
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    {steps.map((step) => {
                         const Icon = step.icon
                         return (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                className="relative"
-                            >
-                                <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0">
-                                        <div className="flex items-center justify-center h-14 w-14 rounded-full bg-red-600 text-white font-bold text-lg">
-                                            {index + 1}
-                                        </div>
+                            <div key={step.number} className="group">
+                                <div className="flex items-start gap-4 mb-4">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                        <Icon className="w-6 h-6" />
                                     </div>
-                                    <div className="pt-1 flex-1">
-                                        <div className="flex items-center gap-3 mb-3">
-                                            <Icon className="w-5 h-5 text-red-600 flex-shrink-0" />
-                                            <h3 className="text-lg font-semibold text-gray-900">{step.title}</h3>
-                                        </div>
-                                        <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
-                                    </div>
+                                    <span className="text-4xl font-bold text-muted-foreground/20">
+                                        {step.number}
+                                    </span>
                                 </div>
 
-                                {/* Connector line for desktop */}
-                                {index < steps.length - 1 && (
-                                    <div className="hidden lg:block absolute top-7 left-24 w-8 h-0.5 bg-gray-300" />
-                                )}
-                            </motion.div>
+                                <h3 className="text-xl font-bold text-foreground mb-2">
+                                    {step.title}
+                                </h3>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    {step.description}
+                                </p>
+                            </div>
                         )
                     })}
                 </div>
-
-
+                <div className="flex justify-center">
+                    <Button
+                        size="lg"
+                        className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8"
+                    >
+                        Get Started Now
+                    </Button>
+                </div>
             </div>
         </section>
     )

@@ -1,4 +1,3 @@
-// components/mobile-menu.tsx
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -20,7 +19,7 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="lg:hidden overflow-hidden border-t border-white/10"
+                    className="lg:hidden overflow-hidden border-t border-border"
                 >
                     <div className="py-4 space-y-3">
                         {items.map((item, index) => (
@@ -42,16 +41,16 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
                         <div className="flex flex-col gap-2 pt-3 border-t border-white/10">
                             <Button
                                 variant="ghost"
-                                className="text-white hover:text-white hover:bg-white/10 w-full justify-start"
+                                className="text-white/90 hover:text-white hover:bg-white/10 w-full justify-start"
                                 onClick={onClose}
                             >
                                 Sign in
                             </Button>
                             <Button
-                                className="bg-[#dc2626] hover:bg-[#b91c1c] text-white w-full"
+                                className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
                                 onClick={onClose}
                             >
-                                Start with us
+                                Start Campaign
                             </Button>
                         </div>
                     </div>

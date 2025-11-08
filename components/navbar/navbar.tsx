@@ -63,10 +63,10 @@ export function Navbar({ className }: NavbarProps) {
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     <Button style={{
-                                        backgroundColor: COLORS.accent[500],
                                         color: 'white',
                                         cursor: "pointer"
-                                    }} className="text-white font-semibold">
+                                    }} className="text-white font-semibold bg-primary hover:bg-primary/90 ">
+
                                         Start Campaign
                                     </Button>
                                 </motion.div>

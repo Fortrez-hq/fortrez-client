@@ -13,7 +13,7 @@ export function Hero() {
                     alt="Community coming together for meaningful causes"
                     className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/35" />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-primary/20" />
             </div>
 
             <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
@@ -47,7 +47,7 @@ export function Hero() {
                     >
                         <Button
                             size="lg"
-                            className="bg-[#dc2626] hover:bg-[#b91c1c] text-white font-semibold px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-lg transition-colors group"
+                            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-lg shadow-lg shadow-primary/20 transition-all group"
                         >
                             Start a Campaign
                             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
